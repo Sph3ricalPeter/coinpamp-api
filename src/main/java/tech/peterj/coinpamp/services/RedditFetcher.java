@@ -3,7 +3,6 @@ package tech.peterj.coinpamp.services;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import tech.peterj.coinpamp.model.RedditPost;
 
@@ -23,6 +22,7 @@ import java.util.logging.Logger;
 public class RedditFetcher {
 
     private static final Logger LOGGER = Logger.getLogger(RedditFetcher.class.getName());
+    private static final String REDDIT_BASE_URL = "https://www.reddit.com";
 
     private final HttpClient client = HttpClient.newHttpClient();
     private final RedditPostService service;
@@ -31,16 +31,16 @@ public class RedditFetcher {
         this.service = service;
     }
 
-    private HttpResponse<String> fetch(String url) throws IOException, InterruptedException {
+    private HttpResponse<String> fetchReddit(String path, String query) throws IOException, InterruptedException {
         var request = HttpRequest.newBuilder(
-                URI.create(url))
+                URI.create(REDDIT_BASE_URL + path + query))
                 .header("Accept", "application/json")
                 .build();
 
         return client.send(request, HttpResponse.BodyHandlers.ofString());
     }
 
-    private List<RedditPost> getNLatestPostsFromResponse(HttpResponse<String> response, int n) throws JsonProcessingException {
+    private List<RedditPost> readRedditPostsFromResponse(HttpResponse<String> response) throws JsonProcessingException {
         ObjectMapper om = new ObjectMapper();
         JsonNode json = om.readTree(response.body());
 
@@ -50,17 +50,19 @@ public class RedditFetcher {
 
         JsonNode postNodes = json.get("data").get("children");
 
-        int postCount = Math.min(n, postNodes.size());
+        int nPosts = postNodes.size();
         List<RedditPost> posts = new ArrayList<>();
 
-        for (int i = 0; i < postCount; ++i) {
+        LOGGER.info("fetched " + nPosts + " posts");
+
+        for (int i = 0; i < nPosts; ++i) {
             JsonNode postData = postNodes.get(i).get("data");
 
             posts.add(new RedditPost(
                     postData.get("id").asText(),
                     postData.get("title").asText(),
                     postData.get("author_fullname").asText(),
-                    postData.get("selftext").asText(),
+                    "", // postData.get("selftext").asText(),
                     postData.get("ups").asText(),
                     Timestamp.from(Instant.ofEpochSecond(postData.get("created").asLong())),
                     postData.get("permalink").asText()
@@ -71,19 +73,24 @@ public class RedditFetcher {
     }
 
     // @Scheduled(fixedDelay = 1000) // fetch every 5 minutes: fixedDelay = 300000
-    public void fetch() {
+    public void doScheduledFetch() {
         LOGGER.info("fetching ...");
     }
 
     @Transactional
-    public void fetchHotCrypto(int nPosts) throws IOException, InterruptedException {
-        HttpResponse<String> response = fetch("https://www.reddit.com/r/CryptoCurrency/hot/.json");
+    public void fetchLatestNCryptoPosts(int n) throws IOException, InterruptedException {
+        // fixme: move the url parameters to the request builder ..
+        // todo: this should also be all posts within last 24 hrs (or different interval)
+        // also ideally only show the ones that have the most upvotes
+        String path = "/r/CryptoCurrency/new.json";
+        String query = String.format("?sort=new&limit=%d", n);
 
+        HttpResponse<String> response = fetchReddit(path, query);
         if (response == null) {
             return;
         }
 
-        List<RedditPost> posts = getNLatestPostsFromResponse(response, nPosts);
+        List<RedditPost> posts = readRedditPostsFromResponse(response);
         service.saveAllPosts(posts);
     }
 
