@@ -1,0 +1,30 @@
+openapi: 3.0.3
+info:
+  title: coinpamp api documentation
+  description: coinpamp api documentation
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080/api/v1'
+    description: 'coinpamp test server on localhost'
+paths:
+  /alive:
+    get:
+      summary: "GET alive"
+      operationId: "healthCheck"
+      responses:
+        "200":
+          description: "OK"
+  /fetch/{n}:
+    get:
+      summary: "GET fetch/{n}"
+      operationId: "fetch"
+      parameters:
+        - name: "n"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int32"
+      responses:
+        "200":
+          description: "OK"

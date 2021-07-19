@@ -37,4 +37,9 @@ public class RedditPostService {
         return ret;
     }
 
+    @Transactional
+    public RedditPost findPost(String id) {
+        return dao.find(id);
+    }
+
 }

@@ -2,6 +2,7 @@ package tech.peterj.coinpamp.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import java.sql.Timestamp;
 
 @Entity
@@ -10,9 +11,14 @@ public class RedditPost {
     @Id
     private String id;
 
+    @Lob
     private String title;
+
     private String author;
+
+    @Lob
     private String text;
+
     private String ups;
     private Timestamp timestamp;
     private String permalink;

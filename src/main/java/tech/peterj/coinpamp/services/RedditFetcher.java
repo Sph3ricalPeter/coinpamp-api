@@ -62,7 +62,7 @@ public class RedditFetcher {
                     postData.get("id").asText(),
                     postData.get("title").asText(),
                     postData.get("author_fullname").asText(),
-                    "", // postData.get("selftext").asText(),
+                    postData.get("selftext").asText(),
                     postData.get("ups").asText(),
                     Timestamp.from(Instant.ofEpochSecond(postData.get("created").asLong())),
                     postData.get("permalink").asText()
