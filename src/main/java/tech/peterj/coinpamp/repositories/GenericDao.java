@@ -54,10 +54,10 @@ public abstract class GenericDao<T> {
      * @param entity Object to persist.
      * @return Persisted entity.
      */
-    public T persist(T entity) {
+    public void persist(T entity) {
         Objects.requireNonNull(entity);
         try {
-            return em.merge(entity);
+            em.persist(entity);
         } catch (RuntimeException ex) {
             throw new PersistenceException("Failed to persist an object!", ex);
         }

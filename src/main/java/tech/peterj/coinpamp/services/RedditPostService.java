@@ -24,7 +24,8 @@ public class RedditPostService {
         if (dao.exists(post.getId())) {
             return dao.update(post);
         }
-        return dao.persist(post);
+        dao.persist(post);
+        return post;
     }
 
     @Transactional
