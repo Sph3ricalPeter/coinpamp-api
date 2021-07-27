@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  server:
+    # put this inside a secret as well
+    environment:
+      - COINPAMP_DB_URL=jdbc:postgresql://db:5432/coinpamp
+      - COINPAMP_DB_USERNAME=postgres
+      - COINPAMP_DB_PASSWORD=admin
+    build: .
+    ports:
+      - '80:8080'
+    depends_on:
+      - db
+
+  db:
+    # load sensitive data from docker secrets instead
+    environment:
+      - POSTGRES_DB=coinpamp
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+    image: postgres:13
+    user: postgres
+    ports:
+    - '5432:5432'

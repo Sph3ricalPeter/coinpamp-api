@@ -33,15 +33,18 @@ public class RedditFetcher {
         JsonNode postNodes = root.get("data").get("children");
 
         List<RedditPost> posts = new ArrayList<>();
-        postNodes.forEach(postNode -> posts.add(new RedditPost(
-                postNode.get("id").asText(),
-                postNode.get("title").asText(),
-                postNode.get("author_fullname").asText(),
-                postNode.get("selftext").asText(),
-                postNode.get("ups").asText(),
-                Timestamp.from(Instant.ofEpochSecond(postNode.get("created").asLong())),
-                postNode.get("permalink").asText()
-        )));
+        postNodes.forEach(postNode -> {
+            var dataNode = postNode.get("data");
+            posts.add(new RedditPost(
+                    dataNode.get("id").asText(),
+                    dataNode.get("title").asText(),
+                    dataNode.get("author_fullname").asText(),
+                    dataNode.get("selftext").asText(),
+                    dataNode.get("ups").asText(),
+                    Timestamp.from(Instant.ofEpochSecond(dataNode.get("created").asLong())),
+                    dataNode.get("permalink").asText()
+            ));
+        });
 
         LOGGER.info("fetched " + posts.size() + " posts");
 

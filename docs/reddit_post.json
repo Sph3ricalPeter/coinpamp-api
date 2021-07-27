@@ -1,0 +1,344 @@
+{
+  "kind": "Listing",
+  "data": {
+    "after": "t3_osr2w1",
+    "dist": 1,
+    "modhash": "",
+    "geo_filter": "",
+    "children": [
+      {
+        "kind": "t3",
+        "data": {
+          "approved_at_utc": null,
+          "subreddit": "CryptoCurrency",
+          "selftext": "",
+          "author_fullname": "t2_2roebilw",
+          "saved": false,
+          "mod_reason_title": null,
+          "gilded": 0,
+          "clicked": false,
+          "title": "Bitcoin Recoils After Amazon Flatly Denies Cryptocurrency Support Speculation",
+          "link_flair_richtext": [
+            {
+              "e": "text",
+              "t": "GENERAL-NEWS"
+            }
+          ],
+          "subreddit_name_prefixed": "r/CryptoCurrency",
+          "hidden": false,
+          "pwls": 6,
+          "link_flair_css_class": "GENERAL-NEWS",
+          "downs": 0,
+          "thumbnail_height": 81,
+          "top_awarded_type": null,
+          "hide_score": true,
+          "name": "t3_osr2w1",
+          "quarantine": false,
+          "link_flair_text_color": "dark",
+          "upvote_ratio": 1.0,
+          "author_flair_background_color": "",
+          "subreddit_type": "public",
+          "ups": 1,
+          "total_awards_received": 0,
+          "media_embed": {},
+          "thumbnail_width": 140,
+          "author_flair_template_id": null,
+          "is_original_content": false,
+          "user_reports": [],
+          "secure_media": null,
+          "is_reddit_media_domain": false,
+          "is_meta": false,
+          "category": null,
+          "secure_media_embed": {},
+          "link_flair_text": "GENERAL-NEWS",
+          "can_mod_post": false,
+          "score": 1,
+          "approved_by": null,
+          "is_created_from_ads_ui": false,
+          "author_premium": false,
+          "thumbnail": "https://b.thumbs.redditmedia.com/ttbjYx7tH-3B4CT7Xr2arNpi2wW_5B4kxu29ZNxNexc.jpg",
+          "edited": false,
+          "author_flair_css_class": "Transitioning",
+          "author_flair_richtext": [
+            {
+              "e": "text",
+              "t": " "
+            }
+          ],
+          "gildings": {},
+          "post_hint": "link",
+          "content_categories": null,
+          "is_self": false,
+          "mod_note": null,
+          "crosspost_parent_list": [
+            {
+              "approved_at_utc": null,
+              "subreddit": "EducationEcosystem1",
+              "selftext": "",
+              "author_fullname": "t2_9vz6ic5r",
+              "saved": false,
+              "mod_reason_title": null,
+              "gilded": 0,
+              "clicked": false,
+              "title": "Bitcoin Recoils After Amazon Flatly Denies Cryptocurrency Support Speculation",
+              "link_flair_richtext": [
+                {
+                  "e": "text",
+                  "t": "Crypto News"
+                }
+              ],
+              "subreddit_name_prefixed": "r/EducationEcosystem1",
+              "hidden": false,
+              "pwls": null,
+              "link_flair_css_class": "",
+              "downs": 0,
+              "thumbnail_height": 81,
+              "top_awarded_type": null,
+              "hide_score": true,
+              "name": "t3_osr0yz",
+              "quarantine": false,
+              "link_flair_text_color": "dark",
+              "upvote_ratio": 1.0,
+              "author_flair_background_color": null,
+              "subreddit_type": "restricted",
+              "ups": 1,
+              "total_awards_received": 0,
+              "media_embed": {},
+              "thumbnail_width": 140,
+              "author_flair_template_id": null,
+              "is_original_content": false,
+              "user_reports": [],
+              "secure_media": null,
+              "is_reddit_media_domain": false,
+              "is_meta": false,
+              "category": null,
+              "secure_media_embed": {},
+              "link_flair_text": "Crypto News",
+              "can_mod_post": false,
+              "score": 1,
+              "approved_by": null,
+              "is_created_from_ads_ui": false,
+              "author_premium": false,
+              "thumbnail": "https://b.thumbs.redditmedia.com/ttbjYx7tH-3B4CT7Xr2arNpi2wW_5B4kxu29ZNxNexc.jpg",
+              "edited": false,
+              "author_flair_css_class": null,
+              "author_flair_richtext": [],
+              "gildings": {},
+              "post_hint": "link",
+              "content_categories": null,
+              "is_self": false,
+              "mod_note": null,
+              "created": 1627434859.0,
+              "link_flair_type": "richtext",
+              "wls": null,
+              "removed_by_category": null,
+              "banned_by": null,
+              "author_flair_type": "text",
+              "domain": "zycrypto.com",
+              "allow_live_comments": false,
+              "selftext_html": null,
+              "likes": null,
+              "suggested_sort": null,
+              "banned_at_utc": null,
+              "url_overridden_by_dest": "https://zycrypto.com/bitcoin-recoils-after-amazon-flatly-denies-cryptocurrency-support-speculation/",
+              "view_count": null,
+              "archived": false,
+              "no_follow": true,
+              "is_crosspostable": false,
+              "pinned": false,
+              "over_18": false,
+              "preview": {
+                "images": [
+                  {
+                    "source": {
+                      "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?auto=webp&amp;s=ca73554a0e79288794b38b34fc743bc33e035766",
+                      "width": 1200,
+                      "height": 700
+                    },
+                    "resolutions": [
+                      {
+                        "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=108&amp;crop=smart&amp;auto=webp&amp;s=6018f6baff8863976a913173df35fcbcf149fc84",
+                        "width": 108,
+                        "height": 63
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=216&amp;crop=smart&amp;auto=webp&amp;s=2011b00658f6cc1083a57ea5f75dd62a83c81fc7",
+                        "width": 216,
+                        "height": 126
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=320&amp;crop=smart&amp;auto=webp&amp;s=5c84b09e071187a53cc35ec39306b414f463c48d",
+                        "width": 320,
+                        "height": 186
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=0429d9ec30c2446b0be428b37c1f2dd767124817",
+                        "width": 640,
+                        "height": 373
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=960&amp;crop=smart&amp;auto=webp&amp;s=67c8e87569d7261c2bd1b7f2af7d9c69efa32fc1",
+                        "width": 960,
+                        "height": 560
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=1080&amp;crop=smart&amp;auto=webp&amp;s=f508be54a89b3b7e9f3b80da8b07f5de31cb8a77",
+                        "width": 1080,
+                        "height": 630
+                      }
+                    ],
+                    "variants": {},
+                    "id": "UI2T1OEtePoBZzcT0xF-xsXICLkcNQhtWW-kUyIZk_8"
+                  }
+                ],
+                "enabled": false
+              },
+              "all_awardings": [],
+              "awarders": [],
+              "media_only": false,
+              "link_flair_template_id": "70eab5a8-c3ae-11eb-84d8-0eeda8077a77",
+              "can_gild": false,
+              "spoiler": false,
+              "locked": false,
+              "author_flair_text": null,
+              "treatment_tags": [],
+              "visited": false,
+              "removed_by": null,
+              "num_reports": null,
+              "distinguished": null,
+              "subreddit_id": "t5_4av7i3",
+              "mod_reason_by": null,
+              "removal_reason": null,
+              "link_flair_background_color": "#cc3600",
+              "id": "osr0yz",
+              "is_robot_indexable": true,
+              "report_reasons": null,
+              "author": "Makeyourpuppyproud",
+              "discussion_type": null,
+              "num_comments": 0,
+              "send_replies": true,
+              "whitelist_status": null,
+              "contest_mode": false,
+              "mod_reports": [],
+              "author_patreon_flair": false,
+              "author_flair_text_color": null,
+              "permalink": "/r/EducationEcosystem1/comments/osr0yz/bitcoin_recoils_after_amazon_flatly_denies/",
+              "parent_whitelist_status": null,
+              "stickied": false,
+              "url": "https://zycrypto.com/bitcoin-recoils-after-amazon-flatly-denies-cryptocurrency-support-speculation/",
+              "subreddit_subscribers": 153,
+              "created_utc": 1627406059.0,
+              "num_crossposts": 1,
+              "media": null,
+              "is_video": false
+            }
+          ],
+          "created": 1627435040.0,
+          "link_flair_type": "richtext",
+          "wls": 6,
+          "removed_by_category": null,
+          "banned_by": null,
+          "author_flair_type": "richtext",
+          "domain": "zycrypto.com",
+          "allow_live_comments": false,
+          "selftext_html": null,
+          "likes": null,
+          "suggested_sort": null,
+          "banned_at_utc": null,
+          "url_overridden_by_dest": "https://zycrypto.com/bitcoin-recoils-after-amazon-flatly-denies-cryptocurrency-support-speculation/",
+          "view_count": null,
+          "archived": false,
+          "no_follow": true,
+          "is_crosspostable": false,
+          "pinned": false,
+          "over_18": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?auto=webp&amp;s=ca73554a0e79288794b38b34fc743bc33e035766",
+                  "width": 1200,
+                  "height": 700
+                },
+                "resolutions": [
+                  {
+                    "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=108&amp;crop=smart&amp;auto=webp&amp;s=6018f6baff8863976a913173df35fcbcf149fc84",
+                    "width": 108,
+                    "height": 63
+                  },
+                  {
+                    "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=216&amp;crop=smart&amp;auto=webp&amp;s=2011b00658f6cc1083a57ea5f75dd62a83c81fc7",
+                    "width": 216,
+                    "height": 126
+                  },
+                  {
+                    "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=320&amp;crop=smart&amp;auto=webp&amp;s=5c84b09e071187a53cc35ec39306b414f463c48d",
+                    "width": 320,
+                    "height": 186
+                  },
+                  {
+                    "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=0429d9ec30c2446b0be428b37c1f2dd767124817",
+                    "width": 640,
+                    "height": 373
+                  },
+                  {
+                    "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=960&amp;crop=smart&amp;auto=webp&amp;s=67c8e87569d7261c2bd1b7f2af7d9c69efa32fc1",
+                    "width": 960,
+                    "height": 560
+                  },
+                  {
+                    "url": "https://external-preview.redd.it/3d0B99kKJifyCnMufbjMwmT5JFX5bIkmXoKos1_9uEo.jpg?width=1080&amp;crop=smart&amp;auto=webp&amp;s=f508be54a89b3b7e9f3b80da8b07f5de31cb8a77",
+                    "width": 1080,
+                    "height": 630
+                  }
+                ],
+                "variants": {},
+                "id": "UI2T1OEtePoBZzcT0xF-xsXICLkcNQhtWW-kUyIZk_8"
+              }
+            ],
+            "enabled": false
+          },
+          "all_awardings": [],
+          "awarders": [],
+          "media_only": false,
+          "can_gild": false,
+          "spoiler": false,
+          "locked": false,
+          "author_flair_text": " ",
+          "treatment_tags": [],
+          "visited": false,
+          "removed_by": null,
+          "num_reports": null,
+          "distinguished": null,
+          "subreddit_id": "t5_2wlj3",
+          "mod_reason_by": null,
+          "removal_reason": null,
+          "link_flair_background_color": "",
+          "id": "osr2w1",
+          "is_robot_indexable": true,
+          "report_reasons": null,
+          "author": "MochaWithSugar",
+          "discussion_type": null,
+          "num_comments": 1,
+          "send_replies": true,
+          "whitelist_status": "all_ads",
+          "contest_mode": false,
+          "mod_reports": [],
+          "author_patreon_flair": false,
+          "crosspost_parent": "t3_osr0yz",
+          "author_flair_text_color": "dark",
+          "permalink": "/r/CryptoCurrency/comments/osr2w1/bitcoin_recoils_after_amazon_flatly_denies/",
+          "parent_whitelist_status": "all_ads",
+          "stickied": false,
+          "url": "https://zycrypto.com/bitcoin-recoils-after-amazon-flatly-denies-cryptocurrency-support-speculation/",
+          "subreddit_subscribers": 3263178,
+          "created_utc": 1627406240.0,
+          "num_crossposts": 0,
+          "media": null,
+          "is_video": false
+        }
+      }
+    ],
+    "before": null
+  }
+}
