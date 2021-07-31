@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import tech.peterj.coinpamp.model.Coin;
 import tech.peterj.coinpamp.model.RedditPost;
@@ -13,6 +14,7 @@ import tech.peterj.coinpamp.services.RedditFetcher;
 import tech.peterj.coinpamp.services.RedditPostService;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Logger;
 
 @RestController
@@ -41,16 +43,21 @@ public class AppController {
     @GetMapping("/fetch/{n}")
     public ResponseEntity<String> fetch(@PathVariable int n) throws IOException, InterruptedException {
         LOGGER.info("REST request fetch");
-        redditFetcher.fetchLatestNCryptoPosts(n);
+        redditFetcher.fetchTopNCryptoPosts(n);
         return new ResponseEntity<>("{\"fetched ...\"}", HttpStatus.OK);
     }
 
-    @GetMapping("/redditThread/{id}")
+    @GetMapping("/reddit/{id}")
     public ResponseEntity<RedditPost> getThreadById(@PathVariable String id) {
-        RedditPost post = redditPostService.findPost(id);
+        RedditPost post = redditPostService.findPostById(id);
         return new ResponseEntity<>(post, HttpStatus.OK);
     }
 
+    @GetMapping("/reddit/today")
+    public ResponseEntity<List<RedditPost>> getTodaysRedditPosts(@RequestParam int limit) {
+        List<RedditPost> posts = redditPostService.findTopPostsOfToday(limit);
+        return new ResponseEntity<>(posts, HttpStatus.OK);
+    }
 
     @GetMapping("/fetchCoins")
     public ResponseEntity<String> fetchCoins() throws IOException, InterruptedException {

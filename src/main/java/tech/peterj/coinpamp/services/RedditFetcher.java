@@ -67,4 +67,11 @@ public class RedditFetcher {
         service.saveAllPosts(posts);
     }
 
+    public void fetchTopNCryptoPosts(int n) throws IOException, InterruptedException {
+        var redditPostRoot = Fetcher.fetch(REDDIT_BASE_URL, "/r/CryptoCurrency/top.json", String.format("?sort=new&limit=%d", n));
+        List<RedditPost> posts = readRedditPostsFromJsonTree(redditPostRoot);
+
+        service.saveAllPosts(posts);
+    }
+
 }

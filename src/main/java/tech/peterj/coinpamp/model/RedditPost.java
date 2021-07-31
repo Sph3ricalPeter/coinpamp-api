@@ -1,11 +1,12 @@
 package tech.peterj.coinpamp.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "RedditPost.findTopNPostsOfToday", query = "SELECT rp FROM RedditPost rp WHERE rp.timestamp >= :yesterday ORDER BY rp.timestamp DESC"),
+})
 public class RedditPost {
 
     @Id

@@ -39,8 +39,13 @@ public class RedditPostService {
     }
 
     @Transactional
-    public RedditPost findPost(String id) {
+    public RedditPost findPostById(String id) {
         return dao.find(id);
+    }
+
+    @Transactional
+    public List<RedditPost> findTopPostsOfToday(int n) {
+        return dao.findTopNPostsOfToday(n);
     }
 
 }
