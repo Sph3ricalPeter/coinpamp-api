@@ -1,27 +1,27 @@
 package tech.peterj.coinpamp.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.sql.Timestamp;
 
 @Entity
 public class CoinPrice {
 
     @Id
-    @GeneratedValue
     private long id;
 
     private double price;
-    private Timestamp timestamp;
 
     public CoinPrice() {
 
     }
 
-    public CoinPrice(double price, Timestamp timestamp) {
+    public CoinPrice(long id, double price) {
+        this.id = id;
         this.price = price;
-        this.timestamp = timestamp;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public long getId() {
@@ -36,11 +36,4 @@ public class CoinPrice {
         this.price = price;
     }
 
-    public Timestamp getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
-    }
 }

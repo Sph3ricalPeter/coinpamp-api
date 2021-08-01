@@ -51,11 +51,6 @@ public class RedditFetcher {
         return posts;
     }
 
-    // @Scheduled(fixedDelay = 1000) // fetch every 5 minutes: fixedDelay = 300000
-    public void doScheduledFetch() {
-        LOGGER.info("fetching ...");
-    }
-
     @Transactional
     public void fetchLatestNCryptoPosts(int n) throws IOException, InterruptedException {
         // fixme: move the url parameters to the request builder ..

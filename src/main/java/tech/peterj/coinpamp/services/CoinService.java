@@ -10,7 +10,7 @@ import java.util.Objects;
 @Service
 public class CoinService {
 
-    private CoinDao dao;
+    private final CoinDao dao;
 
     public CoinService(CoinDao dao) {
         this.dao = dao;

@@ -12,7 +12,7 @@ import java.util.Objects;
 @Service
 public class RedditPostService {
 
-    private RedditPostDao dao;
+    private final RedditPostDao dao;
 
     public RedditPostService(RedditPostDao dao) {
         this.dao = dao;

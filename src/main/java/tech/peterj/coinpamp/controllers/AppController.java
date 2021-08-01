@@ -40,35 +40,41 @@ public class AppController {
         return new ResponseEntity<>("{\"status\" : \"UP\"}", HttpStatus.OK);
     }
 
-    @GetMapping("/fetch/{n}")
-    public ResponseEntity<String> fetch(@PathVariable int n) throws IOException, InterruptedException {
-        LOGGER.info("REST request fetch");
-        redditFetcher.fetchTopNCryptoPosts(n);
-        return new ResponseEntity<>("{\"fetched ...\"}", HttpStatus.OK);
+    @GetMapping("/reddit/update")
+    public ResponseEntity<String> fetchTopNPostsTodayFromCryptoSub(@RequestParam(defaultValue = "10") int limit) throws IOException, InterruptedException {
+        LOGGER.info("REST request fetch top" + limit);
+        redditFetcher.fetchTopNCryptoPosts(limit);
+        return new ResponseEntity<>("{\"status\" : \"OK\"}", HttpStatus.OK);
     }
 
-    @GetMapping("/reddit/{id}")
+    @GetMapping("/reddit/thread/{id}")
     public ResponseEntity<RedditPost> getThreadById(@PathVariable String id) {
         RedditPost post = redditPostService.findPostById(id);
         return new ResponseEntity<>(post, HttpStatus.OK);
     }
 
     @GetMapping("/reddit/today")
-    public ResponseEntity<List<RedditPost>> getTodaysRedditPosts(@RequestParam int limit) {
+    public ResponseEntity<List<RedditPost>> getTodaysTopRedditPosts(@RequestParam int limit) {
         List<RedditPost> posts = redditPostService.findTopPostsOfToday(limit);
         return new ResponseEntity<>(posts, HttpStatus.OK);
     }
 
-    @GetMapping("/fetchCoins")
-    public ResponseEntity<String> fetchCoins() throws IOException, InterruptedException {
+    @GetMapping("/coins/update")
+    public ResponseEntity<String> fetchCoinPriceHistoryForOneDay() throws IOException, InterruptedException {
         LOGGER.info("REST request fetch coins");
-        coinStatsFetcher.fetchCoinPriceDataForOneMonth();
+        coinStatsFetcher.fetchCoinPriceDataForToday();
         return new ResponseEntity<>("{\"fetched coins...\"}", HttpStatus.OK);
     }
 
     @GetMapping("/coins/{id}")
     public ResponseEntity<Coin> getCoinById(@PathVariable String id) {
         var coin = coinService.findCoin(id);
+        return new ResponseEntity<>(coin, HttpStatus.OK);
+    }
+
+    @GetMapping("/coins/{coinId}/today")
+    public ResponseEntity<Coin> getCoinPriceHistoryForToday(@PathVariable String coinId) {
+        var coin = coinService.findCoin(coinId);
         return new ResponseEntity<>(coin, HttpStatus.OK);
     }
 
